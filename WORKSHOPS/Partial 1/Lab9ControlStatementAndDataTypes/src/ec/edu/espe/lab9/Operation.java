@@ -56,7 +56,7 @@ public class Operation {
     
     public int substraction(int operand1,int operand2){
         operand2*=-1;
-        result=add(operand1,(-operand2));
+        result=add(operand1,(operand2));
         return result;
     }    
     

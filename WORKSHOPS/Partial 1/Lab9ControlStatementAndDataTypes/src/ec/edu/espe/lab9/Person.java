@@ -5,6 +5,11 @@
  */
 package ec.edu.espe.lab9;
 
+import java.util.Calendar;
+
+
+
+
 
 /**
  *
@@ -16,33 +21,63 @@ public class Person {
     private int day;
     private int month;
     private int year;
+     
+    
+
+    public Person(String name, int day, int month, int year) {
+        this.name = name;
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+ 
     
     public int age(){
         
-        int actualYear=2018;
-        int actualMonth=5;
-        int actualDay=5;
-    
+        Calendar calendar = Calendar.getInstance();
+        
         Operation addOp = new Operation(0,0);
         
-        if(day>actualDay){
-          day=addOp.substraction(day,actualDay);
-        }else{
-           actualDay=addOp.substraction(actualDay,year);
-        }
-       
-        if(month>actualMonth){
-            month=addOp.substraction(month,actualMonth);
-        }else{
-          actualMonth=addOp.substraction(actualMonth,month);
-        }
+        day=Math.abs(addOp.substraction(calendar.get(Calendar.DAY_OF_MONTH),day));
+        month=Math.abs(addOp.substraction(calendar.get(Calendar.MONTH), month));
+        year=Math.abs(addOp.substraction(calendar.get(Calendar.YEAR), year));
         
-        actualYear=addOp.substraction(actualYear,year);
-        
-        return 0;
+        return year;
        }
         
-    
+            
     
     }
 
