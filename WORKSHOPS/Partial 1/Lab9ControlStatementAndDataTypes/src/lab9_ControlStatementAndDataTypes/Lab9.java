@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab9;
+package lab9_ControlStatementAndDataTypes;
 
-import ec.edu.espe.lab9.Person;
+import ec.edu.espe.lab9.ControlStatementAndDataTypes.FilePrj;
+import ec.edu.espe.lab9.ControlStatementAndDataTypes.Person;
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -22,7 +23,8 @@ public class Lab9 {
         Scanner leer = new Scanner(System.in);
         
         int day=1,month,year;
-        String name;
+        String name,nameFile;
+       
         
        System.out.println("Ingrese su nombre");
         name=leer.next();
@@ -101,12 +103,22 @@ public class Lab9 {
                 
         }
        }while(month<=0||month>12); 
- 
+        
+        System.out.println("Digite el nombre del archivo");
+        nameFile=leer.next();
         
         Person person = new Person(name,day,month,year);
         
         System.out.println(person.age());
        
+        String age=person.age();
+        FilePrj file = new FilePrj();
+        
+        String text =name+";"+String.valueOf(age);
+        
+        file.save(nameFile,text);
+        
+        
         
     }
     

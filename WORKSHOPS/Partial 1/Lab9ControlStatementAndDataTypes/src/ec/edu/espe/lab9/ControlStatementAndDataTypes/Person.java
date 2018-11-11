@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.lab9;
+package ec.edu.espe.lab9.ControlStatementAndDataTypes;
 
 import java.util.Calendar;
 
@@ -70,22 +70,32 @@ public class Person {
         
         Operation addOp = new Operation(0,0);
         
-        if(day<=calendar.get(Calendar.DAY_OF_MONTH)&&month<=calendar.get(Calendar.MONTH)){
-            year+=1;
-        }
-        
+        if(month<=calendar.get(Calendar.MONTH)){
         day=Math.abs(addOp.substraction(calendar.get(Calendar.DAY_OF_MONTH),day));
         month=Math.abs(addOp.substraction(calendar.get(Calendar.MONTH), month));
         year=Math.abs(addOp.substraction(calendar.get(Calendar.YEAR), year));
+        year+=1;
+        return " "+name+"\nSu edad es: "+year+" años ";
         
-        return " "+name+"\nSu edad es: "+year+" años "+" tiene "+day+" dias "+month+" meses ";
-        
-        
-    }
-        
+        }else if((day<=calendar.get(Calendar.DAY_OF_MONTH)||day==calendar.get(Calendar.DAY_OF_MONTH))&&month==calendar.get(Calendar.MONTH)){
+        day=Math.abs(addOp.substraction(calendar.get(Calendar.DAY_OF_MONTH),day));
+        month=Math.abs(addOp.substraction(calendar.get(Calendar.MONTH), month));
+        year=Math.abs(addOp.substraction(calendar.get(Calendar.YEAR), year));
+        year+=2;
+        return " "+name+"\nSu edad es: "+year+" años ";     
+        } else{
             
-    
+        day=Math.abs(addOp.substraction(calendar.get(Calendar.DAY_OF_MONTH),day));
+        month=Math.abs(addOp.substraction(calendar.get(Calendar.MONTH), month));
+        year=Math.abs(addOp.substraction(calendar.get(Calendar.YEAR), year));
+        year-=1;
+         return " "+name+"\nSu edad es: "+year+" años ";           
+        }
+     
     }
+} 
+      
+        
 
     
 
