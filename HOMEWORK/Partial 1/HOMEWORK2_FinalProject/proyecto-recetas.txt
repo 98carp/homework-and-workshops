@@ -1,0 +1,287 @@
+#include <iostream>
+#include <iostream>
+#include <fstream>
+#include <conio.h>
+#include <string>
+#include <time.h>
+#include <windows.h>
+#include <direct.h>
+
+using namespace std;
+
+int z;
+int menu ()
+{
+    int opc;
+    system("cls");
+    cout << "\t\tMENU" << endl;
+    cout << "1.- VER RECETA " << endl;
+    cout << "2.- COSTO POR PLATO " << endl;
+    cout << "3._ PEDIR PLATOS"<<endl;
+    cout << "4.- SALIR" << endl;
+    cout << "Ingrese la opcion a ejecutarse: "; cin >> opc;
+    return opc;
+}
+
+int menu_opciones ()
+{
+    int opc1;
+    system("cls");
+    cout << "\t\tMENU" << endl;
+    cout << "1.- COSTO POR PLATOS FUERTES" << endl;
+    cout << "2.- COSTO POR BEBIDAS" << endl;
+    cout << "3.- COSTO POR POSTRES" << endl;
+    cout << "4._ SALIR"<<endl;
+    cout << "Ingrese la opcion a ejecutarse: "; cin >> opc1;
+    system("cls");
+    return opc1;
+}
+
+int menu_opciones1 ()
+{
+    int opc2;
+    system("cls");
+    cout << "\t\tMENU" << endl;
+    cout << "1.-PLATOS FUERTES" << endl;
+    cout << "2.- BEBIDAS" << endl;
+    cout << "3.- POSTRES" << endl;
+    cout << "4.- MENU PRINCIPAL" << endl;
+    cout << "Ingrese la opcion a ejecutarse: "; cin >> opc2;
+
+    system("cls");
+    return opc2;
+}
+
+void ingreso_forma1 (int n)
+{
+	string text;
+    ifstream platosfuertes;
+	 platosfuertes.open("C:/Users/usuario/Desktop/PROYECTO TERMINADO/PLATOS FUERTES.txt",ios::in);
+ 	if(platosfuertes.fail()){
+ 		cout<<"EL ARCHIVO NO SE HA ENCONTRADO"<<endl;
+ 		exit(1);
+	 }
+	 while(!platosfuertes.eof()){
+	 	getline(platosfuertes,text);
+	 	cout<<text<<endl;
+	 }
+    platosfuertes.close();
+    cout << "\n";
+    system("pause");
+}
+
+void ingreso_forma2 (int n)
+{
+   string text;
+    ifstream bebidas;
+	 bebidas.open("C:/Users/usuario/Desktop/PROYECTO TERMINADO/BEBIDAS.txt",ios::in);
+ 	if(bebidas.fail()){
+ 		cout<<"EL ARCHIVO NO SE HA ENCONTRADO"<<endl;
+ 		exit(1);
+	 }
+	 while(!bebidas.eof()){
+	 	getline(bebidas,text);
+	 	cout<<text<<endl;
+	 }
+    bebidas.close();
+    cout << "\n";
+    system("pause");
+}
+
+void ingreso_forma3 (int n)
+{
+   string text;
+    ifstream postres;
+	 postres.open("C:/Users/usuario/Desktop/PROYECTO TERMINADO/POSTRES.txt",ios::in);
+ 	if(postres.fail()){
+ 		cout<<"EL ARCHIVO NO SE HA ENCONTRADO"<<endl;
+ 		exit(1);
+	 }
+	 while(!postres.eof()){
+	 	getline(postres,text);
+	 	cout<<text<<endl;
+	 }
+    postres.close();
+    cout << "\n";
+    system("pause");
+}
+
+
+void mostrar_forma1 ()
+{
+     string text;
+    ifstream cp;
+	 cp.open("C:/Users/usuario/Desktop/PROYECTO TERMINADO/COSTO POR PLATO FUERTE.txt",ios::in);
+ 	if(cp.fail()){
+ 		cout<<"EL ARCHIVO NO SE HA ENCONTRADO"<<endl;
+ 		exit(1);
+	 }
+	 while(!cp.eof()){
+	 	getline(cp,text);
+	 	cout<<text<<endl;
+	 }
+    cp.close();
+    cout << "\n";
+    system("pause");
+}
+
+void mostrar_forma2 ()
+{
+        string text;
+    ifstream platosfuertes;
+	 platosfuertes.open("C:/Users/usuario/Desktop/PROYECTO TERMINADO/COSTO POR BEBIDAS.txt",ios::in);
+ 	if(platosfuertes.fail()){
+ 		cout<<"EL ARCHIVO NO SE HA ENCONTRADO"<<endl;
+ 		exit(1);
+	 }
+	 while(!platosfuertes.eof()){
+	 	getline(platosfuertes,text);
+	 	cout<<text<<endl;
+	 }
+    platosfuertes.close();
+    cout << "\n";
+    system("pause");
+}
+
+void mostrar_forma3()
+{
+    string text;
+    ifstream platosfuertes;
+	 platosfuertes.open("C:/Users/usuario/Desktop/PROYECTO TERMINADO/COSTO POR POSTRES.txt",ios::in);
+ 	if(platosfuertes.fail()){
+ 		cout<<"EL ARCHIVO NO SE HA ENCONTRADO"<<endl;
+ 		exit(1);
+	 }
+	 while(!platosfuertes.eof()){
+	 	getline(platosfuertes,text);
+	 	cout<<text<<endl;
+	 }
+    platosfuertes.close();
+    cout << "\n";
+    system("pause");
+}
+
+
+int main()
+{
+    int op, op1, op2, n,x;
+    float y=0;
+    do
+    {
+        op=menu();
+        switch (op)
+        {
+
+			case 1:
+				do{
+
+                op2=menu_opciones1();
+                switch (op2)
+                {
+                    case 1:
+                        ingreso_forma1(n);
+                    break;
+                    case 2:
+                        ingreso_forma2(n);
+                    break;
+                    case 3:
+                    	ingreso_forma3(n);
+                    	break;
+                }
+            }while(op2!=4);
+            break;
+            case 2:
+            	do{
+
+                op1=menu_opciones();
+                switch (op1)
+                {
+                    case 1:
+                        mostrar_forma1();
+                    break;
+                    case 2:
+                        mostrar_forma2();
+                    break;
+                    case 3:
+                        mostrar_forma3();
+                    break;
+
+                }
+                }while(op1!=4);
+            break;
+            case 3:
+                system("cls");
+                cout<<"QUE TIPO DE RECETA DESEA VER?"<<endl;
+                cout<<"1)PLATOS FUERTES"<<endl;
+                cout<<"2)BEBIDAS"<<endl;
+                cout<<"3)POSTRES"<<endl;
+                cout<<" "<<endl;
+                cin>>z;
+                system("cls");
+                if(z==2){
+                system("cls");
+                cout<<"QUE RECETA DESEA?"<<endl;
+                cout<<"1)BATIDO DE TURRON"<<endl;
+                cout<<"2)BATIDO DE PLATANO CON CHOCOLATE"<<endl;
+                cout<<"3)SANGRIA"<<endl;
+                cin>>x;
+                cout<<" "<<endl;
+                cout<<"CUANTAS BEBIDAS DESEA "<<endl;
+                cin>>n;
+                if(x==1){
+                y=1.99*n;
+                cout<<"EL PRECIO DE LAS BEBIDAS ES : "<<y<<endl;
+                }
+                if(x==2){
+                y=1.34*n;
+                cout<<"EL PRECIO DE LAS BEBIDAS ES : "<<y<<endl;
+                }
+                if(x==3){
+                    y=3.16*n;
+                 cout<<"EL PRECIO DE LAS BEBIDAS ES : "<<y<<endl;
+                }
+                 system("pause");
+                }
+                if(z==1){
+                     system("cls");
+                cout<<"QUE RECETA DESEA?"<<endl;
+                cout<<"1)PURE DE VERDURAS"<<endl;
+                cout<<"2)SOPA DE MARISCOS"<<endl;
+                cin>>x;
+                cout<<" "<<endl;
+                cout<<"CUANTOS PLATOS DESEA "<<endl;
+                cin>>n;
+                if(x==1){
+                y=9.20*n;
+                cout<<"EL PRECIO DE LOS PLATOS ES : "<<y<<endl;
+                }
+                if(x==2){
+                y=7.99*n;
+                cout<<"EL PRECIO DE LOS PLATOS ES : "<<y<<endl;
+                }
+                 system("pause");
+                }
+                }
+                if(z==3){
+                    cout<<"QUE RECETA DESEA?"<<endl;
+                cout<<"1)SOUFLE DE LIMON"<<endl;
+                cout<<"2)PAN DE CANELA"<<endl;
+                cin>>x;
+                cout<<" "<<endl;
+                cout<<"CUANTOS POSTRES DESEA "<<endl;
+                cin>>n;
+                if(x==1){
+                y=3.12*n;
+                cout<<"EL PRECIO DE LAS BEBIDAS ES : "<<y<<endl;
+                }
+                if(x==2){
+                y=1.99*n;
+                cout<<"EL PRECIO DE LAS BEBIDAS ES : "<<y<<endl;
+                }
+                 system("pause");
+                }
+
+            //break;
+    }while(op!=4);
+    return 0;
+}
