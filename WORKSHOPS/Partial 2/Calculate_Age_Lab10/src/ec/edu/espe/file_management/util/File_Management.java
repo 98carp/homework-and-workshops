@@ -20,15 +20,17 @@ public class File_Management {
     
     
     public void SaveFile(File file, String inString){
-     
+   
         try{
             BufferedWriter buffWriter = new BufferedWriter(new FileWriter(file,true));
             buffWriter.newLine();
             buffWriter.write(inString);
             buffWriter.close();
+         
         }catch(IOException e){
             System.out.println("No se encontro el archivo");
         }
+        
     }  
     
     public void ReaderFile(File file){

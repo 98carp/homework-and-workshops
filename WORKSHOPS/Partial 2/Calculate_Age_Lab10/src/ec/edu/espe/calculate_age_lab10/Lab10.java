@@ -8,6 +8,7 @@ package ec.edu.espe.calculate_age_lab10;
 
 import ec.edu.espe.file_management.util.File_Management;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
@@ -61,17 +62,40 @@ public class Lab10 {
         }
         
         Person person = new Person();
+        ArrayList<Integer> ages = new ArrayList<>();
         person.CalculateDay(Day, Month, Year);
         person.calculateMonth(Day, Month, Year);
         person.calculateAge(Day, Month, Year);
         
+        String AgeString=String.valueOf(person.getAge());
+        String [] Ages = AgeString.split("\\s");
      
+         
+        
         System.out.println(name+" Usted tiene \n"+person.getAge()+" años "+person.getMonthLife()+" meses "+person.getDayLife()+" dias"); 
         inString = "("+ name + " ; " + person.getAge() + " ; "+ person.getMonthLife() + " ; " + person.getDayLife()+" ; "+
                  "Nacio el dia: "+Day+" ; "+" el mes: "+Month+" ; "+" el anio: "+Year+"  )";
         
+        String arreglo[]=new String [10];
+        int conta=0;
+        for(int i=0;i<Ages.length;i++){
+            System.out.println("-->"+Ages[i]);
+            /*arreglo[i]=Ages[i];         
+            conta++;
+            if(conta==2){
+             for(int j=0;j<arreglo.length;j++){
+                 System.out.println("-->"+arreglo[j]);
+             }
+         } */     
+      }
+        
         fileMan.SaveFile(file, inString);
         fileMan.ReaderFile(file);
+        
+        
+        
+        
+        
 
     }
     
