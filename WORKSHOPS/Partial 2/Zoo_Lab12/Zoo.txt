@@ -1,0 +1,25 @@
+
+Nombre cientifico: Vaca
+Id: 10
+Numero de pezones: 2
+Año en que llego: 1988
+Años que lleva en el Zoo: 0
+Cantidad segregada: 2
+Tiempo de segregacion: 6
+Nombre cientifico: Perro
+Id: 11
+Numero de pezones: 1
+Año en que llego: 1987
+Años que lleva en el Zoo: 0
+Cantidad segregada: 5
+Tiempo de segregacion: 1
+Nombre Cientifico: Tiburon
+Numero de vertebras: 4
+Año en que llego: 1999
+Años que lleva en el Zoo: 0
+Tiempo en cambio de piel: 1
+Nombre Cientifico: Serpiente
+Numero de vertebras: 1
+Año en que llego: 1986
+Años que lleva en el Zoo: 0
+Tiempo en cambio de piel: 3
