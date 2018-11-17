@@ -23,7 +23,7 @@ public class Zoo_Lab12 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
         Animal [] animal = new Animal[4]; 
-        File file = new File("Zoo.txt");
+        File file = new File("Zoo.csv");
         String inString;
         File_Management fileMan = new File_Management();
         
@@ -32,7 +32,7 @@ public class Zoo_Lab12 {
         String scientificName;
         
        
-       /* for(int i=0;i<4;i++){
+       /*for(int i=0;i<4;i++){
             System.out.println("Digite el numero de tetillas del mamifero");
             numberOfNipple=cin.nextInt();
             id=(i+1);
@@ -55,8 +55,8 @@ public class Zoo_Lab12 {
             
             animal[i+1] = new Reptile(numberOfVertebrae, id, scientificName, arrivalYear);
         }
-        */
-       
+        
+       */
         animal[0]= new Mammal(2,10,"Vaca",1988);
         animal[1]= new Mammal(1,11,"Perro",1987);
         animal[2]= new Reptile(4,12,"Tiburon",1999);
@@ -64,22 +64,22 @@ public class Zoo_Lab12 {
        
         for(Animal zoo : animal){
             if(zoo instanceof Mammal){
-                inString="Nombre cientifico: "+((Mammal) zoo).getScientificName()
-                    +"\nId: "+((Mammal) zoo).getId()+
-                     "\nNumero de pezones: "+((Mammal) zoo).getNumberOfNipple()+
-                     "\nAño en que llego: "+((Mammal) zoo).getArrivalYear()+
-                     "\nAños que lleva en el Zoo: "+((Mammal) zoo).getYearsOfStay()+
-                     "\nCantidad segregada: "+((Mammal) zoo).quantitySegregate()+
-                     "\nTiempo de segregacion: "+((Mammal) zoo).timeOfSegregate();
+                inString="\n(Nombre cientifico: "+((Mammal) zoo).getScientificName()
+                    +"\nId: "+"; "+((Mammal) zoo).getId()+
+                     "\nNumero de pezones: "+"; "+((Mammal) zoo).getNumberOfNipple()+
+                     "\nAño en que llego: "+"; "+((Mammal) zoo).getArrivalYear()+
+                     "\nAños que lleva en el Zoo: "+"; "+((Mammal) zoo).getYearsOfStay()+
+                     "\nCantidad segregada: "+"; "+((Mammal) zoo).quantitySegregate()+
+                     "\nTiempo de segregacion: )"+"; "+((Mammal) zoo).timeOfSegregate();
                 
                 fileMan.SaveFile(file, inString);
                 
             }else if (zoo instanceof Reptile){
-                inString="Nombre Cientifico: "+((Reptile) zoo).getScientificName()+
-                        "\nNumero de vertebras: "+((Reptile) zoo).getNumberOfVertebrae()+
-                        "\nAño en que llego: "+((Reptile) zoo).getArrivalYear()+
-                        "\nAños que lleva en el Zoo: "+((Reptile) zoo).getYearsOfStay()+
-                        "\nTiempo en cambio de piel: "+((Reptile) zoo).changeSkin();
+                inString="\n(Nombre Cientifico: "+"; "+((Reptile) zoo).getScientificName()+
+                        "\nNumero de vertebras: "+"; "+((Reptile) zoo).getNumberOfVertebrae()+
+                        "\nAño en que llego: "+"; "+((Reptile) zoo).getArrivalYear()+
+                        "\nAños que lleva en el Zoo: "+"; "+((Reptile) zoo).getYearsOfStay()+
+                        "\nTiempo en cambio de piel: )"+"; "+((Reptile) zoo).changeSkin();
                 
                 fileMan.SaveFile(file, inString);
             }
