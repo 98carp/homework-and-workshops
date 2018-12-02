@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author USUARIO
+ * @author Sebastian Landazuri
  */
 public class OperationTest {
     
@@ -98,6 +98,31 @@ public class OperationTest {
         assertEquals(expectedResult, actualResult);
         System.out.println(operand1+"+"+operand2+"= "+actualResult+" succeded");
         
+    }
+    
+    @Test
+    public void TestCharacteres(){
+        /*char operand1='1';
+        char operand2='2';
+        int expectedResult=3;
+        Operation operation = new Operation();
+        
+        short actualResult=operation.add((short)operand1,(short)operand2);
+        
+        assertEquals(expectedResult, actualResult);
+        System.out.println(operand1+"+"+operand2+"= "+actualResult+" succeded");
+        */
+        short operand1='1';
+        short operand2='2';
+        int expectedResult=3;
+        Operation operation = new Operation();
+        
+        short actualResult=operation.add(operand1,operand2);
+        
+        assertEquals(expectedResult, actualResult);
+        System.out.println(operand1+"+"+operand2+"= "+actualResult+" succeded");
+        
+       
     }
     
 }
