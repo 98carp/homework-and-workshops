@@ -41,7 +41,7 @@ public class OperationTest {
     /**
      * Test of add method, of class Operation.
      */
-    @Test
+   @Test
     public void testAdd() {
         System.out.println("add");
         short addent1 = 0;
@@ -50,7 +50,7 @@ public class OperationTest {
         short expResult = 0;
         short result = instance.add(addent1, addent2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        
         
         
     }
@@ -100,9 +100,9 @@ public class OperationTest {
         
     }
     
-    @Test
+   @Test
     public void TestCharacteres(){
-        /*char operand1='1';
+        char operand1='1';
         char operand2='2';
         int expectedResult=3;
         Operation operation = new Operation();
@@ -111,8 +111,8 @@ public class OperationTest {
         
         assertEquals(expectedResult, actualResult);
         System.out.println(operand1+"+"+operand2+"= "+actualResult+" succeded");
-        */
-        short operand1='1';
+        
+       /*
         short operand2='2';
         int expectedResult=3;
         Operation operation = new Operation();
@@ -122,7 +122,15 @@ public class OperationTest {
         assertEquals(expectedResult, actualResult);
         System.out.println(operand1+"+"+operand2+"= "+actualResult+" succeded");
         
-       
+       */
     }
+    
+    
+    //Desde aqui papu
+    
+  
+    
+    
+    
     
 }

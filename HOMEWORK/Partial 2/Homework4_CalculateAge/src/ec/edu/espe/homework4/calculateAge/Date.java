@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 /**
  *
- * @author USUARIO
+ * @author Sebastian Landazuri
  */
 public class Date {
     private final Calendar cal;
@@ -17,12 +17,13 @@ public class Date {
     private int Day,Month,Year,dayLife,monthLife;
     private int age;
 
-    public void calculateAge(int Day, int Month, int Year){
+    public  void calculateAge(int Day, int Month, int Year){
         
         age = operation.sub(cal.get(Calendar.YEAR),this.Year);
+        
     }
     
-    public void CalculateDay(int Day, int Month, int Year){
+    public void calculateDay(int Day, int Month, int Year){
         
         dayLife=operation.sub(cal.get(Calendar.DAY_OF_MONTH), Day);
         

@@ -18,7 +18,7 @@ public class Homework4 {
         Calendar cal = new GregorianCalendar();
         Scanner cin = new Scanner(System.in);
         String name="w";
-        int day = 0, month = 0, year = 0;
+        int day = 0, month = 0, year = 0,error=-1;
         String inString;
         FileAge fileMan = new FileAge();
         File file = new File("Register_Age.csv");
@@ -27,7 +27,7 @@ public class Homework4 {
         System.out.print("Ingresa el nombre: ");
         name = cin.nextLine();
         }catch(Exception ex){
-            System.out.println("Dato erroneo");
+            System.out.println(error);
         }
         
         
@@ -37,7 +37,7 @@ public class Homework4 {
             year = cin.nextInt();
             }while(year<=1900||year>cal.get(Calendar.YEAR));
            }catch(Exception ex){
-               System.out.println("Dato erroneo");
+               System.out.println(error);
                return;
            }
            
@@ -47,7 +47,7 @@ public class Homework4 {
             month = cin.nextInt();
             }while(month<=0||month>12);
             }catch(Exception ex){
-                System.out.println("Dato erroneo");
+                System.out.println(error);
                 return;
             }
             
@@ -59,7 +59,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>29);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                         return;
                     }
                    
@@ -73,7 +73,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>31);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;
@@ -84,7 +84,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>28);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -95,7 +95,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>31);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -106,7 +106,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>30);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -117,7 +117,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>31);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -128,7 +128,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>30);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;  
@@ -139,7 +139,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>31);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -150,7 +150,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>28);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -161,7 +161,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>30);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -172,7 +172,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>31);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -183,7 +183,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>30);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -194,7 +194,7 @@ public class Homework4 {
                     day = cin.nextInt();
                     }while(day<=0||day>31);
                     }catch(Exception ex){
-                        System.out.println("Dato erroneo");
+                        System.out.println(error);
                            return;
                     }
                     break;    
@@ -203,7 +203,7 @@ public class Homework4 {
              
         Date date = new Date();
         ArrayList<Integer> ages = new ArrayList<>();
-        date.CalculateDay(day, month, year);
+        date.calculateDay(day, month, year);
         date.calculateMonth(day, month, year);
         date.calculateAge(day, month, year);
         

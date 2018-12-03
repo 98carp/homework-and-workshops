@@ -7,7 +7,7 @@ package ec.edu.espe.homework4.calculateAge;
 
 /**
  *
- * @author USUARIO
+ * @author Sebastian Landazuri
  */
 public class Operation {
     int result;
