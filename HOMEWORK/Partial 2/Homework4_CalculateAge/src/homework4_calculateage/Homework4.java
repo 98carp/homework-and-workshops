@@ -35,6 +35,9 @@ public class Homework4 {
             do{
             System.out.print("Ingrese el año de nacimiento: ");
             year = cin.nextInt();
+            if(year<=1900||year>cal.get(Calendar.YEAR)){
+                System.out.println(error);
+            }
             }while(year<=1900||year>cal.get(Calendar.YEAR));
            }catch(Exception ex){
                System.out.println(error);
@@ -45,6 +48,9 @@ public class Homework4 {
             do{
             System.out.print("Ingrese el mes de nacimiento: ");
             month = cin.nextInt();
+            if(month<=0||month>12){
+                System.out.println(error);
+            }
             }while(month<=0||month>12);
             }catch(Exception ex){
                 System.out.println(error);
@@ -57,6 +63,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>29){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>29);
                     }catch(Exception ex){
                         System.out.println(error);
@@ -71,6 +80,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>31){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>31);
                     }catch(Exception ex){
                         System.out.println(error);
@@ -82,6 +94,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>28){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>28);
                     }catch(Exception ex){
                         System.out.println(error);
@@ -93,6 +108,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>31){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>31);
                     }catch(Exception ex){
                         System.out.println(error);
@@ -104,6 +122,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>30){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>30);
                     }catch(Exception ex){
                         System.out.println(error);
@@ -115,6 +136,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>31){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>31);
                     }catch(Exception ex){
                         System.out.println(error);
@@ -126,6 +150,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>30){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>30);
                     }catch(Exception ex){
                         System.out.println(error);
@@ -137,6 +164,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>31){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>31);
                     }catch(Exception ex){
                         System.out.println(error);
@@ -148,6 +178,9 @@ public class Homework4 {
                     do{    
                     System.out.print("Ingrese el dia de nacimiento: ");
                     day = cin.nextInt();
+                    if(day<=0||day>28){
+                        System.out.println(error);
+                    }
                     }while(day<=0||day>28);
                     }catch(Exception ex){
                         System.out.println(error);
